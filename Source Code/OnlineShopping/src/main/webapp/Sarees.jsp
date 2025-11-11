@@ -162,7 +162,7 @@
               <p class="card-text">\${saree.desc}</p>
               <h6 class="text-success fw-bold">Price: \${saree.price}</h6>
               <div class="d-flex justify-content-center gap-2 mt-2">
-                <button class="btn btn-sm btn-warning">Add to Cart</button>
+                <button class="btn btn-sm btn-warning me-5">Add to Cart</button>
                 <button class="btn btn-sm btn-primary">Order Now</button>
               </div>
             </div>

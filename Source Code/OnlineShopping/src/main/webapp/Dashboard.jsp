@@ -142,7 +142,7 @@ footer {
         <div class="card-body text-center">
           <h4 class="fw-bold">Long Frocks</h4>
           <p class="text-muted">Elegant and flowy long frocks that combine comfort with class — perfect for evening outings, parties, and daily elegance.</p>
-          <a href="Dresses.java" class="btn btn-primary px-4 py-2">Shop Long Frocks</a>
+          <a href="Frocks.jsp" class="btn btn-primary px-4 py-2">Shop Long Frocks</a>
         </div>
       </div>
     </div>
