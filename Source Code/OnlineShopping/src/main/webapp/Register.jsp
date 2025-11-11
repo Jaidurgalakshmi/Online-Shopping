@@ -10,14 +10,22 @@
 
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+<style>
+     body{
+        background-image:url('https://img.freepik.com/premium-vector/background-with-colorful-shopping-bags-vector-illustration-sale-discount-concept_653240-59.jpg?semt=ais_hybrid&w=740&q=80');
+         background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+     }
+</style>
 </head>
 
-<body class="bg-primary text-black bg-gradient min-vh-100 d-flex justify-content-center align-items-center">
+<body class="bg-light">
 
-<div class="container">
+<div class="container text-black bg-gradient min-vh-100 d-flex justify-content-center align-items-center">
   <div class="card bg-light bg-opacity-25 border-0 shadow-lg p-4 mx-auto" style="max-width: 500px;">
     <div class="card-body">
-      <h3 class="text-center text-white mb-4 fw-bold">Customer Registration</h3>
+      <h3 class="text-center text-primary mb-4 fw-bold">Customer Registration</h3>
 
       <form action="register" method="post" class="text-white">
         <div class="mb-3">
