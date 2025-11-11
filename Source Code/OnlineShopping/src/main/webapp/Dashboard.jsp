@@ -105,7 +105,7 @@ footer {
         <div class="card-body text-center">
           <h4 class="fw-bold">Women Sarees</h4>
           <p class="text-muted">Embrace the grace of tradition with our exquisite sarees, woven from premium fabrics and adorned with timeless beauty.</p>
-          <a href="Sarees.html" class="btn btn-primary px-4 py-2">Shop Sarees</a>
+          <a href="Sarees.jsp" class="btn btn-primary px-4 py-2">Shop Sarees</a>
         </div>
       </div>
     </div>
@@ -118,7 +118,7 @@ footer {
         <div class="card-body text-center">
           <h4 class="fw-bold">Kurtis</h4>
           <p class="text-muted">Discover everyday elegance with our soft, stylish kurtas — perfect for casual wear or festive occasions.</p>
-          <a href="Kurti.html" class="btn btn-primary px-4 py-2">Shop Kurtas</a>
+          <a href="Kurtis.jsp" class="btn btn-primary px-4 py-2">Shop Kurtas</a>
         </div>
       </div>
     </div>

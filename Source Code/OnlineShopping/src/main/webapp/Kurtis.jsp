@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -156,11 +158,11 @@
 
         colDiv.innerHTML = `
           <div class="card text-center h-100 mt-5">
-            <img src="${kurti.img}" class="card-img-top" alt="${kurti.alt}"/>
+            <img src="\${kurti.img}" class="card-img-top" alt="\${kurti.alt}"/>
             <div class="card-body">
-              <h5 class="card-title">${kurti.title}</h5>
-              <p class="card-text">${kurti.desc}</p>
-              <h6 class="text-success fw-bold">Price: ${kurti.price}</h6>
+              <h5 class="card-title">\${kurti.title}</h5>
+              <p class="card-text">\${kurti.desc}</p>
+              <h6 class="text-success fw-bold">Price: \${kurti.price}</h6>
               <div class="d-flex justify-content-center gap-2 mt-2">
                 <button class="btn btn-sm btn-warning">Add to Cart</button>
                 <button class="btn btn-sm btn-primary">Order Now</button>
