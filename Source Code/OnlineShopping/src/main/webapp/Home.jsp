@@ -97,7 +97,7 @@ section {
     <div class="carousel-item">
       <img src="https://t3.ftcdn.net/jpg/15/44/84/66/360_F_1544846672_pjAjTGENbbAwYwMTjVug17Ij22NYQpHQ.jpg" class="d-block w-100" alt="Fashion 2">
       <div class="carousel-caption">
-        <h1 class="fw-bold">Elegant Sarees & Lehengas</h1>
+        <h1 class="fw-bold">ElegantSarees & Lehengas</h1>
         <p>For every occasion, we’ve got your look covered.</p>
         <a href="Login.jsp" class="btn btn-shop">Join Now</a>
       </div>
@@ -106,7 +106,7 @@ section {
     <div class="carousel-item">
       <img src="https://img1.junaroad.com/uiproducts/21342303/pri_175_p-1719925026.jpg" class="d-block w-100" alt="Fashion 3">
       <div class="carousel-caption">
-        <h1 class="fw-bold">Trendy Kurtas & Froks</h1>
+        <h1 class="fw-bold">TrendyKurtas & Frocks</h1>
         <p>Style meets comfort in every design.</p>
         <a href="Login.jsp" class="btn btn-shop">Explore Now</a>
       </div>
