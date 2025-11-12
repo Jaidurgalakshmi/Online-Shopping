@@ -10,9 +10,6 @@
   
   <style>
     img {
-      width: 100%;
-      height: 200px;
-      object-fit: contain;
       border-radius: 8px 8px 0 0;
     }
     .card {
@@ -158,7 +155,7 @@
 
         colDiv.innerHTML = `
           <div class="card text-center h-100 mt-5">
-            <img src="\${kurti.img}" class="card-img-top" alt="\${kurti.alt}"/>
+            <img src="\${kurti.img}" class="w-100" alt="\${kurti.alt}" style="height:300px"/>
             <div class="card-body">
               <h5 class="card-title">\${kurti.title}</h5>
               <p class="card-text">\${kurti.desc}</p>
@@ -172,6 +169,9 @@
         `;
         kurtiRow.appendChild(colDiv);
       });
+
+    });
+    });
     });
   </script>
 </body>

@@ -68,7 +68,6 @@ section {
     </button>
     <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
       <ul class="navbar-nav">
-        <li class="nav-item"><a class="nav-link active" href="Home.jsp">Home</a></li>
         <li class="nav-item"><a class="nav-link" href="Login.jsp">Login</a></li>
         <li class="nav-item"><a class="nav-link" href="Register.jsp">Register</a></li>
       </ul>

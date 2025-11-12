@@ -4,15 +4,12 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Women's Kurti Sets Collection</title>
+  <title>Women's Long Frocks Collection</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
-   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
   
   <style>
     img {
-      width: 100%;
-      height: 200px;
-      object-fit: contain;
       border-radius: 8px 8px 0 0;
     }
     .card {
@@ -58,111 +55,111 @@
 </head>
 <body class="container mt-5">
 
-  <h4 class="text-center mb-4 fixed-header">Women's Kurti Sets Collection</h4>
-  <div class="row" id="kurti-row"></div>
+  <h4 class="text-center mb-4 fixed-header">Women's Long Frocks Collection</h4>
+  <div class="row" id="frock-row"></div>
 
   <script>
     document.addEventListener("DOMContentLoaded", () => {
-      const kurtis = [
+      const frocks = [
         {
-          img: "https://i.pinimg.com/1200x/68/dc/5c/68dc5c75a4251c0095982bdd67100eb1.jpg",
-          alt: "Cotton Kurti Set",
-          title: "Cotton Printed Kurti Set",
-          desc: "Comfortable cotton kurti with matching palazzo and dupatta — perfect for casual wear.",
-          price: "₹1,499"
+          img: "https://i.pinimg.com/736x/4f/e0/64/4fe0647e8527b470043f2a139a8b03a4.jpg",
+          alt: "Floral Maxi Dress",
+          title: "Floral Maxi Long Frock",
+          desc: "Elegant floral printed long frock made from soft georgette fabric — perfect for evening outings.",
+          price: "₹2,199"
         },
         {
-          img: "https://i.pinimg.com/1200x/3d/36/ab/3d36ab5522cbcf13b31ecafd8fc3ab23.jpg",
-          alt: "Anarkali Kurti Set",
-          title: "Anarkali Kurti Set",
-          desc: "Elegant Anarkali-style kurti with flowy design and contrasting dupatta.",
-          price: "₹2,799"
-        },
-        {
-          img: "https://i.pinimg.com/736x/83/b2/f8/83b2f83f983d4e0bc25dd0b66825b759.jpg",
-          alt: "Rayon Kurti Set",
-          title: "Rayon Kurti Set",
-          desc: "Soft rayon fabric with floral prints and comfy palazzo pants — all-day comfort.",
-          price: "₹1,899"
-        },
-        {
-          img: "https://i.pinimg.com/736x/28/4a/e4/284ae4df63b77fbd195285716b0dfc7a.jpg",
-          alt: "Festive Kurti Set",
-          title: "Festive Embroidered Kurti Set",
-          desc: "Chic embroidered kurti set with mirror work detailing — perfect for festivals.",
-          price: "₹3,199"
-        },
-        {
-          img: "https://i.pinimg.com/1200x/c2/8a/30/c28a308a354c8f7ba35bdd4a8e9aad07.jpg",
-          alt: "Cotton Blend Kurti Set",
-          title: "Cotton Blend Kurti Set",
-          desc: "Breathable cotton blend fabric with pastel tones — elegant and minimal.",
-          price: "₹1,599"
-        },
-        {
-          img: "https://i.pinimg.com/736x/05/01/d3/0501d327fe6fc3886633551246da5958.jpg",
-          alt: "Printed Kurti Set",
-          title: "Floral Printed Kurti Set",
-          desc: "Bright floral prints with a breezy palazzo and soft dupatta for a stylish summer look.",
-          price: "₹1,899"
-        },
-        {
-          img: "https://i.pinimg.com/1200x/c8/42/3b/c8423bf14efde4dabd21fb64e871a6c5.jpg",
-          alt: "Chikankari Kurti Set",
-          title: "Chikankari Kurti Set",
-          desc: "Classic Lucknowi chikankari kurti set with fine thread embroidery.",
-          price: "₹2,999"
-        },
-        {
-          img: "https://i.pinimg.com/736x/05/2c/0b/052c0b400ad25991640cd15289ebedc0.jpg",
-          alt: "Silk Kurti Set",
-          title: "Silk Kurti Set",
-          desc: "Rich silk kurti paired with contrast churidar and dupatta — festive essential.",
+          img: "https://i.pinimg.com/736x/76/0f/9a/760f9ac008c427901310539f1f31ede8.jpg",
+          alt: "Silk Long Frock",
+          title: "Designer Silk Long Frock",
+          desc: "Rich silk fabric with beautiful embroidery and flared design for festive occasions.",
           price: "₹3,499"
         },
         {
-          img: "https://i.pinimg.com/736x/75/53/12/755312e6fe26cbb0af97a6d4d3212449.jpg",
-          alt: "Straight Kurti Set",
-          title: "Straight Cut Kurti Set",
-          desc: "Stylish straight-cut kurti with elegant print and comfortable fit.",
-          price: "₹1,699"
+          img: "https://i.pinimg.com/736x/21/93/69/2193690d8b54e077b495007b641389a3.jpg",
+          alt: "Anarkali Long Frock",
+          title: "Anarkali Style Long Frock",
+          desc: "Classic Anarkali cut with traditional prints and elegant dupatta pairing.",
+          price: "₹2,999"
         },
         {
-          img: "https://i.pinimg.com/736x/b2/00/e8/b200e81f8afdc873d81bbd5a771b95a0.jpg",
-          alt: "Party Kurti Set",
-          title: "Designer Party Kurti Set",
-          desc: "Stylish party wear kurti set with sequin work and designer dupatta.",
+          img: "https://i.pinimg.com/1200x/a3/25/d8/a325d8824a8937db896c9d9204a2ff95.jpg",
+          alt: "Cotton Long Frock",
+          title: "Casual Cotton Long Frock",
+          desc: "Lightweight cotton fabric with subtle pastel tones — ideal for daily comfort and summer wear.",
+          price: "₹1,599"
+        },
+        {
+          img: "https://i.pinimg.com/1200x/01/b3/ed/01b3edc6b66efc7521d1d674397fc609.jpg",
+          alt: "Partywear Gown",
+          title: "Partywear Long Gown Frock",
+          desc: "Stylish partywear gown with sequin detailing and soft lining for a comfortable fit.",
           price: "₹3,899"
         },
         {
-          img: "https://i.pinimg.com/736x/f8/04/4c/f8044cdc1352525440b6694f19edfa17.jpg",
-          alt: "Handloom Kurti Set",
-          title: "Handloom Cotton Kurti Set",
-          desc: "Soft handloom cotton with block prints — ideal for daily elegance.",
+          img: "https://i.pinimg.com/736x/33/b3/26/33b32682c72c2ac301be8a35814f47d7.jpg",
+          alt: "Handloom Frock",
+          title: "Handloom Cotton Long Frock",
+          desc: "Authentic handloom cotton frock with ethnic motifs and breathable comfort.",
+          price: "₹1,899"
+        },
+        {
+          img: "https://i.pinimg.com/736x/fb/f9/0a/fbf90a3ee90014eb0829916c105b0c64.jpg",
+          alt: "Rayon Long Frock",
+          title: "Rayon Printed Long Frock",
+          desc: "Beautiful rayon material with artistic prints and flowing design — perfect for a chic look.",
           price: "₹1,799"
         },
         {
-          img: "https://i.pinimg.com/1200x/41/76/0b/41760be2d40cd392c3355d08a8779cda.jpg",
-          alt: "Embroidered Kurti Set",
-          title: "Embroidered Kurti Set",
-          desc: "Delicate thread embroidery on a pastel base — graceful and timeless.",
+          img: "https://i.pinimg.com/1200x/9f/b5/5e/9fb55e7fef01bd3b8a932a603c6e40a2.jpg",
+          alt: "Evening Gown",
+          title: "Evening Long Frock Gown",
+          desc: "Elegant gown-style frock with shimmery detailing — perfect for evening parties.",
+          price: "₹4,299"
+        },
+        {
+          img: "https://i.pinimg.com/736x/f6/c7/bf/f6c7bf89df16631b47edf35dfef902e5.jpg",
+          alt: "Chiffon Long Frock",
+          title: "Chiffon Long Frock",
+          desc: "Lightweight chiffon material with flowy design and soft texture for effortless grace.",
           price: "₹2,499"
+        },
+        {
+          img: "https://i.pinimg.com/1200x/aa/10/c4/aa10c43843c0ebbda7bc90d71201e4cc.jpg",
+          alt: "Designer Long Frock",
+          title: "Designer Long Frock with Belt",
+          desc: "Trendy long frock featuring a waist belt and floral embroidery — elegant and stylish.",
+          price: "₹3,299"
+        },
+        {
+          img: "https://i.pinimg.com/1200x/84/90/ba/8490ba8dae9ac71a56300ce381b42a4c.jpg",
+          alt: "Printed Maxi Frock",
+          title: "Bohemian Printed Long Frock",
+          desc: "Boho-inspired printed frock with free-flowing design — great for travel and casual wear.",
+          price: "₹1,999"
+        },
+        {
+          img: "https://www.zapdress.com/cdn/shop/files/94_SZ7KI_B_86MY_0V7F_U.png?v=1749538760",
+          alt: "Net Long Frock",
+          title: "Net Embroidered Long Frock",
+          desc: "Stylish net material frock with thread embroidery — perfect for receptions or festive occasions.",
+          price: "₹4,099"
         }
       ];
 
-      const kurtiRow = document.getElementById("kurti-row");
+      const frockRow = document.getElementById("frock-row");
 
-      kurtis.forEach(kurti => {
+      frocks.forEach(frock => {
         const colDiv = document.createElement("div");
         colDiv.className = "col-md-4 mb-3";
 
         colDiv.innerHTML = `
           <div class="card text-center h-100 mt-5">
-            <img src="\${kurti.img}" class="card-img-top" alt="\${kurti.alt}"/>
+            <img src="\${frock.img}" class="w-100" alt="\${frock.alt}" style="height:300px"/>
             <div class="card-body">
-              <h5 class="card-title">\${kurti.title}</h5>
-              <p class="card-text">\${kurti.desc}</p>
-              <h6 class="text-success fw-bold">Price: \${kurti.price}</h6>
+              <h5 class="card-title">\${frock.title}</h5>
+              <p class="card-text">\${frock.desc}</p>
+              <h6 class="text-success fw-bold">Price:\${frock.price}</h6>
               <div class="d-flex justify-content-center gap-2 mt-2">
                 <button class="btn btn-sm btn-warning me-5">Add to Cart</button>
                 <button class="btn btn-sm btn-primary">Order Now</button>
@@ -170,7 +167,7 @@
             </div>
           </div>
         `;
-        kurtiRow.appendChild(colDiv);
+        frockRow.appendChild(colDiv);
       });
     });
   </script>

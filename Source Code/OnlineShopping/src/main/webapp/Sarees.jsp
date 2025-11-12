@@ -7,12 +7,10 @@
   <title>Saree Collection</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
   <style>
-    img {
-      width: 100%;
-      height: 180px;
-      object-fit: contain;
-      border-radius: 8px 8px 0 0;
-    }
+  img{
+     border-radius:8px 8px 0 0;
+  
+  }
     .card {
       border: none;
       box-shadow: 0 3px 6px rgba(0,0,0,0.15);
@@ -155,8 +153,8 @@
         colDiv.className = "col-md-4 mb-3";
 
         colDiv.innerHTML = `
-          <div class="card text-center h-100 mt-5">
-            <img src="\${saree.img}" class="card-img-top" alt="\${saree.alt}"/>
+          <div class="card h-100 text-center mt-5" style="width:300px">
+            <img src="\${saree.img}" class=" w-100" alt="\${saree.alt}" style="height:300px"/>
             <div class="card-body">
               <h5 class="card-title">\${saree.title}</h5>
               <p class="card-text">\${saree.desc}</p>
