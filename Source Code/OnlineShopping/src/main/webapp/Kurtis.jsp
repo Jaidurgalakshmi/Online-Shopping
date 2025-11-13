@@ -51,12 +51,17 @@
       box-shadow: 0 2px 6px rgba(0,0,0,0.1);
       padding: 10px 0;
     }
+    body{
+     background-image:url("https://files.123freevectors.com/wp-content/solidbackground/transparent-green-free-solidcolor-background.jpg");
+     background-repeat:no-repeat;
+     background-size:cover;
+     background-position:center;
+     }
   </style>
 </head>
 <body class="container mt-5">
-
-  <h4 class="text-center mb-4 fixed-header">Women's Kurti Sets Collection</h4>
-  <div class="row" id="kurti-row"></div>
+  <h3 class="fixed-header text-center mb-4">Women's Kurtis Collection <a href="Cart.jsp" class="btn btn-success go-to-cart" style="float:right">Go to Cart 🛒</a></h3>
+  <div class="row mt-5 pt-5" id="kurti-row"></div>
 
   <script>
     document.addEventListener("DOMContentLoaded", () => {
@@ -149,7 +154,7 @@
 
       const kurtiRow = document.getElementById("kurti-row");
 
-      kurtis.forEach(kurti => {
+      kurtis.forEach((kurti,index) => {
         const colDiv = document.createElement("div");
         colDiv.className = "col-md-4 mb-3";
 
@@ -160,18 +165,18 @@
               <h5 class="card-title">\${kurti.title}</h5>
               <p class="card-text">\${kurti.desc}</p>
               <h6 class="text-success fw-bold">Price: \${kurti.price}</h6>
-              <div class="d-flex justify-content-center gap-2 mt-2">
-                <button class="btn btn-sm btn-warning me-5">Add to Cart</button>
-                <button class="btn btn-sm btn-primary">Order Now</button>
-              </div>
+              <form action="addtocart" method="post" class="d-inline-block">
+	          <input type="hidden" name="product_id" value="${index + 1}"/>
+	          <input type="hidden" name="product_name" value="${kurti.title}"/>
+	          <input type="hidden" name="price" value="${kurti.price}"/>
+	          Quantity: <input type="number" name="quantity" min="1" value="1" required style="width: 60px;"/><br><br>
+	          <button type="submit" class="btn btn-warning ms-2">Add to Cart</button>
+	        </form>
             </div>
           </div>
         `;
         kurtiRow.appendChild(colDiv);
       });
-
-    });
-    });
     });
   </script>
 </body>

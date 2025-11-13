@@ -26,7 +26,6 @@ body {
 
 .carousel-inner img {
     height: 85vh;
-    object-fit: cover;
 }
 
 .carousel-caption {
@@ -105,7 +104,7 @@ section {
     <div class="carousel-item">
       <img src="https://img1.junaroad.com/uiproducts/21342303/pri_175_p-1719925026.jpg" class="d-block w-100" alt="Fashion 3">
       <div class="carousel-caption">
-        <h1 class="fw-bold">TrendyKurtas & Frocks</h1>
+        <h1 class="fw-bold">TrendyKurtis & Frocks</h1>
         <p>Style meets comfort in every design.</p>
         <a href="Login.jsp" class="btn btn-shop">Explore Now</a>
       </div>
