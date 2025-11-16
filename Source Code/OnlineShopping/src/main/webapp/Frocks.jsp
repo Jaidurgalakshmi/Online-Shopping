@@ -159,22 +159,26 @@
         colDiv.className = "col-md-4 mb-3";
 
         colDiv.innerHTML = `
-          <div class="card text-center h-100 mt-5">
-            <img src="\${frock.img}" class="w-100" alt="\${frock.alt}" style="height:300px"/>
-            <div class="card-body">
-              <h5 class="card-title">\${frock.title}</h5>
-              <p class="card-text">\${frock.desc}</p>
-              <h6 class="text-success fw-bold">Price:\${frock.price}</h6>
-              <form action="addtocart" method="post" class="d-inline-block">
-	          <input type="hidden" name="product_id" value="${index + 1}"/>
-	          <input type="hidden" name="product_name" value="${frock.title}"/>
-	          <input type="hidden" name="price" value="${frock.price}"/>
-	          Quantity: <input type="number" name="quantity" min="1" value="1" required style="width: 60px;"/><br><br>
-	          <button type="submit" class="btn btn-warning ms-2">Add to Cart</button>
-	        </form>            
-	        </div>
-          </div>
-        `;
+        	  <div class="card text-center h-100 mt-5">
+        	    <img src="\${frock.img}" class="w-100" alt="\${frock.alt}" style="height:300px"/>
+        	    <div class="card-body">
+        	      <h5 class="card-title">\${frock.title}</h5>
+        	      <p class="card-text">\${frock.desc}</p>
+        	      <h6 class="text-success fw-bold">Price: \${frock.price}</h6>
+
+        	      <form action="addtocart" method="post" class="d-inline-block">
+        	        <input type="hidden" name="product_id" value="\${index + 1}">
+        	        <input type="hidden" name="product_name" value="\${frock.title}">
+        	        <input type="hidden" name="price" value="\${frock.price}">
+
+        	        Quantity:
+        	        <input type="number" name="quantity" min="1" value="1" required style="width: 60px;"><br><br>
+
+        	        <button type="submit" class="btn btn-warning ms-2">Add to Cart</button>
+        	      </form>
+        	    </div>
+        	  </div>
+        	`;
         frockRow.appendChild(colDiv);
       });
     });

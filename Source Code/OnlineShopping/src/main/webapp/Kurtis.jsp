@@ -154,29 +154,30 @@
 
       const kurtiRow = document.getElementById("kurti-row");
 
-      kurtis.forEach((kurti,index) => {
-        const colDiv = document.createElement("div");
-        colDiv.className = "col-md-4 mb-3";
+      kurtis.forEach((item, index) => {
+    	  const colDiv = document.createElement("div");
+    	  colDiv.className = "col-md-4 mb-4";
 
-        colDiv.innerHTML = `
-          <div class="card text-center h-100 mt-5">
-            <img src="\${kurti.img}" class="w-100" alt="\${kurti.alt}" style="height:300px"/>
-            <div class="card-body">
-              <h5 class="card-title">\${kurti.title}</h5>
-              <p class="card-text">\${kurti.desc}</p>
-              <h6 class="text-success fw-bold">Price: \${kurti.price}</h6>
-              <form action="addtocart" method="post" class="d-inline-block">
-	          <input type="hidden" name="product_id" value="${index + 1}"/>
-	          <input type="hidden" name="product_name" value="${kurti.title}"/>
-	          <input type="hidden" name="price" value="${kurti.price}"/>
-	          Quantity: <input type="number" name="quantity" min="1" value="1" required style="width: 60px;"/><br><br>
-	          <button type="submit" class="btn btn-warning ms-2">Add to Cart</button>
-	        </form>
-            </div>
-          </div>
-        `;
-        kurtiRow.appendChild(colDiv);
-      });
+    	  colDiv.innerHTML = `
+    	    <div class="card text-center h-100">
+    	      <img src="\${item.img}" class="w-100" alt="\${item.title}" style="height:300px"/>
+    	      <div class="card-body">
+    	        <h5 class="card-title">\${item.title}</h5>
+    	        <p class="card-text">\${item.desc}</p>
+    	        <h6 class="text-success fw-bold">Price: ₹\${item.price}</h6>
+
+    	        <form action="addtocart" method="post" class="d-inline-block">
+    	          <input type="hidden" name="product_name" value="\${item.title}">
+    	          <input type="hidden" name="price" value="\${item.price}">
+    	          Quantity: <input type="number" name="quantity" min="1" value="1" required style="width:60px;">
+    	          <button type="submit" class="btn btn-warning btn-sm ms-2">Add to Cart</button>
+    	        </form>
+    	      </div>
+    	    </div>
+    	  `;
+
+    	  kurtiRow.appendChild(colDiv);
+    	});
     });
   </script>
 </body>

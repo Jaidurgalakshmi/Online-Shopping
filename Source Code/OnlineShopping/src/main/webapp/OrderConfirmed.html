@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Confirmed!</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            /* --- UPDATED BACKGROUND COLOR --- */
+            background-color: #e0f7fa; /* A soft, light cyan/blue */
+            /* -------------------------------- */
+            color: #333;
+            text-align: center;
+        }
+
+        .confirmation-card {
+            background-color: white; /* Keep the card clean white */
+            padding: 40px 60px;
+            border-radius: 12px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2); /* Slightly stronger shadow to stand out */
+            max-width: 450px;
+            transform: scale(0.95);
+            opacity: 0;
+            animation: fadeInScale 0.5s ease-out forwards;
+        }
+
+        @keyframes fadeInScale {
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        .success-icon {
+            color: #4CAF50;
+            font-size: 80px;
+            line-height: 1;
+            margin-bottom: 15px;
+            animation: bounce 0.8s ease-out;
+        }
+
+        @keyframes bounce {
+            0% { transform: scale(0.5); }
+            70% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+
+        h1 {
+            color: #4CAF50;
+            margin-top: 0;
+            margin-bottom: 10px;
+            font-size: 2.2em;
+        }
+
+        p {
+            margin-bottom: 25px;
+            color: #555; /* Slightly darker text for contrast */
+            font-size: 1.1em;
+        }
+
+        .cta-button {
+            background-color: #007bff;
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1.05em;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+
+        .cta-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="confirmation-card">
+        <div class="success-icon">✓</div>
+        <h1>Order Confirmed!</h1>
+        <p>Your order has been successfully placed. </p>
+        <a href="Dashboard.jsp" class="cta-button">Continue Shopping</a>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+
+    <script>
+        // Initialize the confetti effect
+        function triggerConfetti() {
+            // A common "fireworks" or "celebration" configuration
+            confetti({
+                particleCount: 200, // Number of pieces
+                spread: 120,        // How wide the blast is
+                origin: { y: 0.6 }, // Start slightly below the center of the screen
+                angle: 90,          // Launch angle (straight up)
+                decay: 0.9,
+                gravity: 1,
+                startVelocity: 45,
+                ticks: 200,
+                colors: ['#4CAF50', '#FFD700', '#FF69B4', '#00BFFF', '#FFFFFF'] // Custom celebration colors
+            });
+            
+            // Optional: Add a second, lower blast for a fuller effect
+            setTimeout(() => {
+                confetti({
+                    particleCount: 100,
+                    spread: 80,
+                    origin: { y: 0.7 },
+                    angle: 90,
+                    startVelocity: 30,
+                    ticks: 150
+                });
+            }, 100);
+        }
+
+        // Trigger the confetti when the page loads
+        window.onload = triggerConfetti;
+    </script>
+
+</body>
+</html>

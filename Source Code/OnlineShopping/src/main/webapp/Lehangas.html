@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Lehenga Collection</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <style>
+    img {
+      border-radius: 10px 10px 0 0;
+    }
+    .card {
+      border: none;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      border-radius: 10px;
+      transition: transform 0.2s ease;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+    }
+    .fixed-heading {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: white;
+      padding: 15px;
+      text-align: center;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+      z-index: 1000;
+    }
+    .go-to-cart {
+      position: fixed;
+      top: 15px;
+      right: 20px;
+      z-index: 1001;
+    }
+  </style>
+</head>
+
+<body class="container mt-5">
+
+  <h3 class="fixed-heading text-center mb-4">💃 Lehenga Collection</h3>
+  <a href="Cart.jsp" class="btn btn-success go-to-cart">Go to Cart 🛒</a>
+
+  <div class="row mt-5 pt-5" id="lehenga-row"></div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const lehengas = [
+        { img: "https://i.pinimg.com/736x/34/a8/f5/34a8f519824fb258cda465651fbbb5be.jpg", title: "Blue Designer Lehenga", desc: "Elegant blue designer lehenga with sequins embroidery.", price: 7999 },
+        { img: "https://i.pinimg.com/736x/af/a5/21/afa521eca87c00883b49a685baff40dd.jpg", title: "Red Bridal Lehenga", desc: "Traditional red bridal lehenga with zari work.", price: 12499 },
+        { img: "https://i.pinimg.com/736x/f4/54/63/f4546330be4ab4b2a6b7b462c0bb2663.jpg", title: "Green Sequins Lehenga", desc: "Green lehenga with detailed thread embroidery.", price: 6499 },
+        { img: "https://i.pinimg.com/1200x/c1/2d/67/c12d678296d78c3afc245469c3d1804b.jpg", title: "Pink Embroidered Lehenga", desc: "Vibrant pink lehenga choli with shimmering design.", price: 8499 },
+        { img: "https://i.pinimg.com/1200x/97/e1/a8/97e1a81142e2bf377fc82eb05e1066fd.jpg", title: "Yellow Festive Lehenga", desc: "Bright yellow lehenga with mirror work.", price: 5999 },
+        { img: "https://i.pinimg.com/736x/b9/6a/61/b96a6176069c20a01d5052811d871456.jpg", title: "Purple Embroidered Lehenga", desc: "Purple lehenga with heavy embroidery.", price: 7299 }
+      ];
+
+      const lehengaRow = document.getElementById("lehenga-row");
+
+      lehengas.forEach((item, index) => {
+        const colDiv = document.createElement("div");
+        colDiv.className = "col-md-4 mb-4";
+
+        colDiv.innerHTML = `
+          <div class="card text-center h-100">
+            <img src="\${item.img}" class="w-100" style="height:300px"/>
+            
+            <div class="card-body">
+              <h5 class="card-title">\${item.title}</h5>
+              <p class="card-text">\${item.desc}</p>
+              <h6 class="text-success fw-bold mb-3">Price: ₹\${item.price}</h6>
+
+              <form action="addtocart" method="post">
+                <input type="hidden" name="product_id" value="\${index + 1}">
+                <input type="hidden" name="product_name" value="\${item.title}">
+                <input type="hidden" name="price" value="\${item.price}">
+
+                Quantity:
+                <input type="number" name="quantity" min="1" value="1" style="width:60px" required>
+
+                <br><br>
+
+                <button type="submit" class="btn btn-warning">Add to Cart</button>
+              </form>
+
+            </div>
+          </div>
+        `;
+
+        lehengaRow.appendChild(colDiv);
+      });
+
+    });
+  </script>
+
+</body>
+</html>

@@ -160,23 +160,26 @@
         colDiv.className = "col-md-4 mb-3";
 
         colDiv.innerHTML = `
-          <div class="card h-100 text-center mt-5" style="width:300px">
-            <img src="\${saree.img}" class=" w-100" alt="\${saree.alt}" style="height:300px"/>
-            <div class="card-body">
-              <h5 class="card-title">\${saree.title}</h5>
-              <p class="card-text">\${saree.desc}</p>
-              <h6 class="text-success fw-bold">Price: \${saree.price}</h6>
-              <form action="addtocart" method="post" class="d-inline-block">
-	          <input type="hidden" name="product_id" value="${index + 1}"/>
-	          <input type="hidden" name="product_name" value="${saree.title}"/>
-	          <input type="hidden" name="price" value="${saree.price}"/>
-	          Quantity: <input type="number" name="quantity" min="1" value="1" required style="width: 60px;"/><br><br>
-	          <button type="submit" class="btn btn-warning ms-2">Add to Cart</button>
-	        </form>
+        	  <div class="card h-100 text-center mt-5" style="width:300px">
+        	    <img src="\${saree.img}" class="w-100" alt="\${saree.alt}" style="height:300px"/>
+        	    <div class="card-body">
+        	      <h5 class="card-title">\${saree.title}</h5>
+        	      <p class="card-text">\${saree.desc}</p>
+        	      <h6 class="text-success fw-bold">Price: \${saree.price}</h6>
 
-            </div>
-          </div>
-        `;
+        	      <form action="addtocart" method="post" class="d-inline-block">
+        	        <input type="hidden" name="product_id" value="$\{index + 1}"/>
+        	        <input type="hidden" name="product_name" value="\${saree.title}"/>
+        	        <input type="hidden" name="price" value="\${saree.price}"/>
+
+        	        Quantity:
+        	        <input type="number" name="quantity" min="1" value="1" required style="width: 60px;"/><br><br>
+
+        	        <button type="submit" class="btn btn-warning ms-2">Add to Cart</button>
+        	      </form>
+        	    </div>
+        	  </div>
+        	`;
 
         sareeRow.appendChild(colDiv);
       });

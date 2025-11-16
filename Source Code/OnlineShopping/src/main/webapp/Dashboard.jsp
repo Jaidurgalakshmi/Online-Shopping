@@ -79,9 +79,15 @@ footer {
     <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item"><a class="nav-link active" href="#">Dashboard</a></li>
-        <li class="nav-item"><a class="nav-link" href="Cart.jsp">Cart</a></li>
-        <li class="nav-item"><a class="nav-link" href="orders.jsp">Orders</a></li>
-        <li class="nav-item"><a class="nav-link text-danger" href="logout.jsp">Logout</a></li>
+        <li class="nav-item"><a class="nav-link" href="Cart.jsp">View Cart</a></li>
+        <li class="nav-item"><a class="nav-link" href="MyOrders.jsp">My Orders</a></li>
+        <li class="nav-item"><a class="nav-link text-danger" href="logout" onclick="return confirmLogout()">Logout</a></li>
+<script>
+  function confirmLogout() {
+    return confirm("Are you sure you want to logout?");
+  }
+</script>
+        
       </ul>
     </div>
   </div>
@@ -129,7 +135,7 @@ footer {
         <div class="card-body text-center">
           <h4 class="fw-bold">Lehengas</h4>
           <p class="text-muted">Step into the spotlight with our designer lehengas — perfect for weddings, parties, and grand celebrations.</p>
-          <a href="Dresses.java" class="btn btn-primary text-white px-4 py-2">Shop Lehengas</a>
+          <a href="Lehangas.html" class="btn btn-primary text-white px-4 py-2">Shop Lehengas</a>
         </div>
       </div>
     </div>
